@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
-  base: '/Evershine_Website/',
+  base: '/evershine-web-app/',
   
 })

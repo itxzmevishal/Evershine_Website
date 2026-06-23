@@ -1,12 +1,24 @@
+import { motion } from "framer-motion";
+
 function AboutPreview() {
   return (
-    <section className="bg-[#F8F6F2] py-20 md:py-28">
-
+    <motion.section
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+      className="bg-[#F8F6F2] py-20 md:py-28"
+    >
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10">
 
         {/* Heading */}
-        <div className="max-w-4xl mb-16">
-
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mb-16"
+        >
           <p className="uppercase tracking-[4px] text-yellow-600 text-sm font-semibold mb-4">
             About Stable Evershine
           </p>
@@ -32,15 +44,20 @@ function AboutPreview() {
             warmth of a new sunrise, every development is designed to create
             exceptional living experiences.
           </p>
-
-        </div>
+        </motion.div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
           {/* Card 1 */}
-          <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            whileHover={{ y: -10 }}
+            className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300"
+          >
             <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-6">
               <span className="text-2xl">◉</span>
             </div>
@@ -53,12 +70,17 @@ function AboutPreview() {
               Inspired by the emergence of a shell from water,
               symbolizing beauty, strength and timeless elegance.
             </p>
-
-          </div>
+          </motion.div>
 
           {/* Card 2 */}
-          <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            whileHover={{ y: -10 }}
+            className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300"
+          >
             <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-6">
               <span className="text-2xl">☀</span>
             </div>
@@ -71,12 +93,17 @@ function AboutPreview() {
               Every project reflects positivity,
               opportunity and the promise of new beginnings.
             </p>
-
-          </div>
+          </motion.div>
 
           {/* Card 3 */}
-          <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            whileHover={{ y: -10 }}
+            className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300"
+          >
             <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-6">
               <span className="text-2xl">▣</span>
             </div>
@@ -89,14 +116,11 @@ function AboutPreview() {
               Luxury residences crafted with modern architecture,
               thoughtful planning and enduring quality.
             </p>
-
-          </div>
+          </motion.div>
 
         </div>
-
       </div>
-
-    </section>
+    </motion.section>
   );
 }
 

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import heroVideo from "../assets/videos/Evershine.mp4";
 
 function Hero() {
@@ -5,21 +6,23 @@ function Hero() {
     <section className="relative min-h-screen overflow-hidden">
 
       {/* Background Video */}
-      <video
+      <motion.video
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
+        initial={{ scale: 1.15 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 3 }}
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src={heroVideo} type="video/mp4" />
-      </video>
+      </motion.video>
 
-      {/* Dark Overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30"></div>
 
       {/* Content */}
@@ -28,35 +31,62 @@ function Hero() {
         <div className="max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-10">
 
           {/* Tagline */}
-          <p className="uppercase tracking-[4px] md:tracking-[6px] text-yellow-400 text-xs md:text-sm mb-4 md:mb-6">
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="uppercase tracking-[4px] md:tracking-[6px] text-yellow-400 text-xs md:text-sm mb-4 md:mb-6"
+          >
             WATER • LIGHT • LEGACY
-          </p>
+          </motion.p>
 
           {/* Heading */}
-          <h1 className="text-white font-bold leading-[0.9]
-          text-5xl
-          sm:text-6xl
-          md:text-7xl
-          lg:text-8xl
-          max-w-5xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="
+            text-white
+            font-bold
+            leading-[0.9]
+            text-5xl
+            sm:text-6xl
+            md:text-7xl
+            lg:text-8xl
+            max-w-5xl
+          "
+          >
             Stable
             <br />
             Evershine
-          </h1>
+          </motion.h1>
 
           {/* Description */}
-          <p className="text-gray-300
-          text-base
-          md:text-lg
-          lg:text-xl
-          mt-6 md:mt-8
-          max-w-2xl">
+          <motion.p
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="
+            text-gray-300
+            text-base
+            md:text-lg
+            lg:text-xl
+            mt-6
+            md:mt-8
+            max-w-2xl
+          "
+          >
             Landmark residences shaped around calm waterfront cues,
             rising sunlight and the quiet confidence of enduring luxury.
-          </p>
+          </motion.p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-10">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-10"
+          >
 
             <button className="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold transition-all duration-300">
               Explore Projects
@@ -66,7 +96,7 @@ function Hero() {
               Enquire Now
             </button>
 
-          </div>
+          </motion.div>
 
         </div>
 

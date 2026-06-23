@@ -1,4 +1,4 @@
-function PressMedia() {
+function PressMediaSection() {
   const news = [
     {
       id: 1,
@@ -100,4 +100,4 @@ function PressMedia() {
   );
 }
 
-export default PressMedia;
+export default PressMediaSection;

@@ -1,4 +1,4 @@
-function NriCorner() {
+function NriCornerSection() {
   const articles = [
     {
       id: 1,
@@ -80,4 +80,4 @@ function NriCorner() {
   );
 }
 
-export default NriCorner;
+export default NriCornerSection;

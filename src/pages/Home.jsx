@@ -1,22 +1,25 @@
 import Hero from "../components/Hero";
 import HeroSearch from "../components/HeroSearch";
 import AboutPreview from "../components/AboutPreview";
-import FeaturedProjects from "../components/FeaturedProjects";
-import Associations from "../components/Associations";
-import PressMedia from "../components/PressMedia";
-import NriCorner from "../components/NriCorner";
+import FeaturedProjects from "../components/FeaturedProjectsSection";
+import AssociationsSection from "../components/AssociationsSection";
+import PressMedia from "../components/PressMediaSection";
+import NriCornerSection from "../components/NriCornerSection";
 import ContactCTA from "../components/ContactCTA";
+import PressMediaSection from "../components/PressMediaSection";
+import StatsSection from "../components/StatsSection";
 
 function Home() {
   return (
     <>
       <Hero />
+      <StatsSection />
       <HeroSearch />
       <AboutPreview />
       <FeaturedProjects />
-      <Associations />
-      <PressMedia />
-      <NriCorner />
+      <AssociationsSection />
+      <PressMediaSection />
+      <NriCornerSection />
       <ContactCTA />
     </>
   );

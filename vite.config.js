@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/Evershine_Website/',
+   base: '/Evershine-Web-App/',
 });
